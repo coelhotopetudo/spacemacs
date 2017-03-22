@@ -133,7 +133,7 @@ values."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 13
+                               :size 11
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -299,6 +299,13 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  
+  "coelhotopetudo tweaks"
+  (setq mouse-yank-at-point t)
+  (define-key evil-normal-state-map (kbd "RET") 'save-buffer)
+  (evil-define-key 'normal org-mode-map (kbd "RET") 'save-buffer)
+  (setq frame-title-format "%b")
+
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
